@@ -1,0 +1,28 @@
+{
+  "name": "hangman",
+  "version": "1.0.0",
+  "description": "An awesome game developed using react and nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utkarsha02/Hangman-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/utkarsha02/Hangman-Project/issues"
+  },
+  "homepage": "https://github.com/utkarsha02/Hangman-Project#readme",
+  "dependencies": {
+    "@babel/preset-react": "^7.16.7",
+    "babel": "^6.23.0",
+    "webpack": "^5.67.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  }
+}
