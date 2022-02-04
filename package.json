@@ -18,12 +18,16 @@
   },
   "homepage": "https://github.com/utkarsha02/Hangman-Project#readme",
   "dependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
-    "babel": "^6.23.0",
     "babel-loader": "^8.2.3",
-    "nvm": "^0.0.4",
+    "css-loader": "^6.6.0",
+    "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
     "webpack": "^5.67.0"
   },
   "devDependencies": {
