@@ -1,14 +1,14 @@
 import React from "react";
 
-export default function Word({ actualword, playedLetters }) {
+export default function Word({ actualWord, playedLetters }) {
   return (
-    <div>
-      {[...actualword].map((letter) => (
+    <div className="display-flex justify-content-around word-flex">
+      {[...actualWord].map((letter) => (
         <>
           {playedLetters.has(letter) ? (
-            <span>{letter}</span>
+            <div className="word">{letter}</div>
           ) : (
-            <span>&nbsp;_&nbsp;</span>
+            <div className="word">&nbsp;_&nbsp;</div>
           )}
         </>
       ))}

@@ -1,87 +1,27 @@
-.hangman-container {
-  position: relative;
-  padding-left: 10rem;
-  padding-top: 8rem;
+@import "settings/reset.scss";
+@import "settings/variables.scss";
+@import "layouts/container.scss";
+@import "components/start.scss";
+@import "components/hangman.scss";
+@import "components/word.scss";
+
+.display-none {
+  display: none;
 }
 
-.pole {
-  position: absolute;
-  height: 700px;
-  left: 3rem;
-  top: 2rem;
-  border-left: 10px solid brown;
-  border-top: 10px solid brown;
-  width: 10rem;
-
-  &::after {
-    content: "";
-    height: 5.5rem;
-    width: 10px;
-    background: brown;
-    position: absolute;
-    right: 0;
-  }
+.display-flex {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.hangman {
-  position: relative;
-  &__element {
-    opacity: 0.25;
-    &:nth-child(1) {
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
-      border: 10px solid black;
-    }
-
-    &:not(:first-child) {
-      height: 100px;
-      background: black;
-      width: 10px;
-    }
-
-    &:nth-child(2) {
-      position: absolute;
-      height: 300px;
-      left: 55px;
-    }
-
-    &:nth-child(3) {
-      position: absolute;
-      transform: rotate(45deg);
-      left: 20px;
-      top: 150px;
-    }
-
-    &:nth-child(4) {
-      position: absolute;
-      transform: rotate(-45deg);
-      left: 90px;
-      top: 150px;
-    }
-
-    &:nth-child(5) {
-      position: absolute;
-      transform: rotate(45deg);
-      left: 20px;
-      top: 400px;
-    }
-
-    &:nth-child(6) {
-      position: absolute;
-      transform: rotate(-45deg);
-      left: 90px;
-      top: 400px;
-    }
-  }
+.justify-content-center {
+  justify-content: center;
 }
 
-@for $i from 1 through 6 {
-  .hangman-#{$i} {
-    @for $j from 1 through $i {
-      .hangman__element:nth-child(#{$j}) {
-        opacity: 1;
-      }
-    }
-  }
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.word-flex {
+  margin-bottom: 3rem;
 }

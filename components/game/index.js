@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import Lives from "./lives";
-import Word from "./actualword";
-import Letters from "./letters";
-import Start from "./start";
+import Layout from "./layout";
 
 const MAX_LIVES = 6;
 export default function Game() {
@@ -35,8 +32,8 @@ export default function Game() {
 
   //find out if game is actually running we use isRunning
   //game runs if we still have lives left and actualword is not guessed
-  const isRunning = lives > 0 && actualWord && !isWon;
-
+  // const isRunning = actualWord && lives > 0 && !isWon;
+  const isRunning = actualWord;
   const guess = (letter) => {
     setPlayedLetters((prev) => [...prev, letter]);
   };
@@ -49,19 +46,15 @@ export default function Game() {
 
   return (
     <>
-      {isRunning && (
-        <>
-          <Lives livesleft={lives} />
-          <Word actualword={actualWord} playedLetters={played_set} />
-          <Letters playedLetters={played_set} onSelect={guess} />
-        </>
-      )}
-      <Start onStart={start} />
-      {isWon && (
-        <>
-          <div>You Won!!</div>
-        </>
-      )}
+      <Layout
+        lives={lives}
+        actualWord={actualWord}
+        played_set={played_set}
+        guess={guess}
+        start={start}
+        isWon={isWon}
+        isRunning={isRunning}
+      />
     </>
   );
 }

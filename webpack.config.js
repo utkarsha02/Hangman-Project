@@ -1,6 +1,7 @@
 module.exports = {
   mode: "development",
   entry: "./app.js",
+  watch: true,
   module: {
     rules: [
       {
@@ -12,7 +13,7 @@ module.exports = {
         },
       },
       {
-        test: /.\s[ac]ss$/i,
+        test: /\.s[ac]ss/,
         use: ["style-loader", "css-loader", "sass-loader"],
         exclude: /node_modules/,
       },
